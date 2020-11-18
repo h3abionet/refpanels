@@ -1,11 +1,18 @@
 # RefImpute release V4
 
-## Description: 
+## Stats: 
+
+|               | V4a          | V4b          |
+| :------------- | :----------: | -----------: |
+| Samples        | Y            | y            |
+| Chromosomes    | 1-22         | 1-22         |
+| Locus types    | snps,indels  | snps,indels  |
+| InDels         | Z            | Z            |
+| SNPs           | W            | W            |
+| Loci           | X            | X            |
+
+
 ### Panel
- - X loci
- - Y samples
- - Chromosomes: 1-22
- -  SNPs and Indels with '`--min-ac 3`' and '`--max-alleles 2`'
  - Populations:
    - XXX (m samples)
    - YYY (n samples)
@@ -15,10 +22,7 @@
 ## Steps:
 ### 01_clean.sh
   - remove 'trypanogen12' (duplicates and low QC)
-  - remove all INFO and FORMAT fields except
-   - ^INFO/DP
-   - ^INFO/QD
-   - ^INFO/VQSLOD
+  - remove all INFO and FORMAT fields except (INFO/DP;INFO/QD;INFO/VQSLOD)
 
 ### 02_add_rsids.sh
  - annotate with latest dbSNP:
@@ -33,9 +37,7 @@
 
 ### 03_filter.sh
  - keep only vcf lines that:
-  - have 2 alleles
-  - minor allele count > 2
-  - is "snp" or "indel"
-
+   - is "snp" or "indel"
+   - have 2 alleles and minor allele count >= 3
 
 
