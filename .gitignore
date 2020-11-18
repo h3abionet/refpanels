@@ -1,1 +1,9 @@
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*/data
+*.log
+**/logs
+**swp
+*/tmp
+*/input
+*/old_scripts
