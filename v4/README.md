@@ -1,4 +1,4 @@
-# V4 RefImpute release
+# RefImpute release V4
 
 ## Description: 
 ### Panel
