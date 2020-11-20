@@ -40,4 +40,8 @@
    - is "snp" or "indel"
    - have 2 alleles and minor allele count >= 3
 
+### suggestions:
+ - keep a sites only VCF of each version (not publicly avalailable)
+ - extensive stats about SNPs
+ - don't filter out the GQ score
 
