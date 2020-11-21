@@ -55,7 +55,7 @@ custom_mark13
 actor User;
 participant "First Class" as A;
 participant "Second Class" as B;
-participant "Last Class" as C;
+participant "DBAC" as C;
 User -> A: DoWork;
 activate A;
 A -> B: Create Request;
